@@ -8,48 +8,61 @@ import os
 
 print "Starting..."
 
+artist_links = sys.argv[1:]
+artist_ids = []
+name_matches = []
+artist_names = []
 
-artist_id = get_artist_id(sys.argv[1])
 
-# Scrapes artist name from URL
+for link in artist_links:
 
-name_match = re.search(r'artists\/[^\/]+', sys.argv[1])
-artist_name = name_match.group(0)[8:]
+	# Storing artist id's
 
-# Gets song objects
+	artist_ids.append(get_artist_id(link))
 
-songs = get_artist_songs(artist_id)
+	# Scraping artist names from URLs
+
+	artist_names.append(re.search(r'artists\/[^\/]+', link).group(0)[8:])
+
+# Gets song objects for each artist via ID
 
 lyrics_sheet = ""
+for ID in artist_ids:
 
-songs = [song for song in songs if song['primary_artist']['id'] == int(artist_id)]
-for song in songs:
-	song_url = song['url']
+	# Visual counter for which artist is being processed
 
-	# Gets raw HTML of song page
+	counter = str(artist_ids.index(ID)+1) + " of " + str(len(artist_ids)) + "\n"
+	songs = get_artist_songs(ID)
 
-	response = requests.get(song_url)
-	html = response.text
+	songs = [song for song in songs if song['primary_artist']['id'] == int(ID)]
+	for song in songs:
+		song_url = song['url']
 
-	soup = BeautifulSoup(html, 'html.parser')
+		# Gets raw HTML of song page
 
-	# Isolates lyrics tag
+		response = requests.get(song_url)
+		html = response.text
 
-	lyrics = soup.find(name="lyrics")
+		soup = BeautifulSoup(html, 'html.parser')
 
-	# Strips all HTML tags and headers ([Verse 1], [Outro], etc.)
+		# Isolates lyrics tag
 
-	lyrics = re.sub(r'<[^>]*>','',str(lyrics))
-	lyrics = re.sub(r'\[[^\]]*\]','',lyrics)
+		lyrics = soup.find(name="lyrics")
+
+		# Strips all HTML tags and headers ([Verse 1], [Outro], etc.)
+
+		lyrics = re.sub(r'<[^>]*>','',str(lyrics))
+		lyrics = re.sub(r'\[[^\]]*\]','',lyrics)
 
 
-	lyrics_sheet += "\n" + lyrics
+		lyrics_sheet += "\n" + lyrics
 
-	# Progress visualization
+		# Progress visualization
 
-	os.system('cls' if os.name == 'nt' else 'clear')
-	print "Compiling lyrics... "
-	print str(round(float(songs.index(song))/len(songs), 4) * 100.) + "%"
+		os.system('cls' if os.name == 'nt' else 'clear')
+		print counter + "\n"
+		print "Compiling lyrics... "
+		print str(round(float(songs.index(song))/len(songs), 4) * 100.) + "%"
 
 
 os.system('cls' if os.name == 'nt' else 'clear')
@@ -57,8 +70,10 @@ print "Compiling lyrics... "
 print "100.0%, complete\n"
 
 # Overwrites or creates new file with song name and all lyrics
-
-filename = str(artist_name) + ".txt"
+filename = artist_names[0]
+for name in artist_names[1:]:
+	filename += "_" +str(name)
+filename += ".txt"
 
 text_file = open("source/"+filename, "w")
 

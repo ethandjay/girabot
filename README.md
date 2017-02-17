@@ -1,5 +1,5 @@
 # girabot
-Compiles all lyrics from a given artist into a text document, generates Markov text from the file, and tweets it
+Compiles all lyrics from given artist(s) into a single text document, generates Markov text from the file, and tweets it
 
 **Arguments for girabot.py [*arg1 (optional)*] [*arg2 (optional assuming arg1=[filename])*]:**  
 * arg1
@@ -8,8 +8,8 @@ Compiles all lyrics from a given artist into a text document, generates Markov t
 * arg2
  * LOCAL   - will generate text for a tweet and print it but will not post it on the linked account
 
-**Arguments for scrape_lyrics.py [*arg1*]:**  
-* arg1
+**Arguments for scrape_lyrics.py [*arg1, arg2,..., argn*]:**  
+* argi
  * [Genius Artist URL] - takes in URL for artist on https://genius.com, in the format of https://genius.com/artists/xxxx
 	
 
