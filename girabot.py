@@ -74,7 +74,7 @@ try:
 	print '\n' + tweet + '\n'
 
 	#LOCAL argument prints generated tweet but doesn't post it
-	if (not (len(sys.argv) > 1 and sys.argv[1] == "LOCAL")):
+	if (not (len(sys.argv) > 2 and sys.argv[2] == "LOCAL")):
 		print 'posting to Twitter...'
 		status = api.PostUpdate(tweet)
 		print '  post successful!\n'
