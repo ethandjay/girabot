@@ -4,6 +4,7 @@ import random, os
 from OAuthSettings import settings    #import authorization settings
 import twitter
 
+# Deletes all tweets with IDs taken from TweetIDs.txt, clears that file and then clears Tweets.txt
 
 def DESTROY():
 	consumer_key = settings['consumer_key']
@@ -54,6 +55,8 @@ os.system('cls' if os.name=='nt' else 'clear')
 
 with open(sys.argv[1]) as f:
     text = f.read()
+
+# Runs text through Markov chain, treating each line as a new sentence. To use standard punction as breakpoints, use Text() instead
 
 text_model = markovify.NewlineText(text)
 

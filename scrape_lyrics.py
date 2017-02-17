@@ -60,9 +60,9 @@ print "100.0%, complete\n"
 
 filename = str(artist_name) + ".txt"
 
-text_file = open(filename, "w")
+text_file = open("source/"+filename, "w")
 
 text_file.write(lyrics_sheet)
 text_file.close()
 
-print "Lyrics sheet at " + text_file.name + " in working directory"
+print "Lyrics sheet at " + text_file.name + " in source directory"
