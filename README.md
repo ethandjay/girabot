@@ -1,15 +1,15 @@
 # girabot
 Compiles all lyrics from given artist(s) into a single text document, generates Markov text from the file, and tweets it
 
-**Arguments for girabot.py [*arg<sub>1</sub> (optional)*] [*arg2 (optional assuming arg1=[filename])*]:**  
-* arg1
+**Arguments for girabot.py [*arg<sub>1</sub> (optional)*] [*arg<sub>2</sub> (optional assuming arg<sub>1</sub>=[filename])*]:**  
+* arg<sub>1</sub>
  * [filename] - the filename of the source text file  
  * DESTROY - will delete all tweets on account and will wipe TweetIDs.txt and Tweets.txt  
-* arg2
+* arg<sub>2</sub>
  * LOCAL   - will generate text for a tweet and print it but will not post it on the linked account
 
-**Arguments for scrape_lyrics.py [*arg1*] [*arg2*] ... [*argn*]:**  
-* argi
+**Arguments for scrape_lyrics.py [*arg<sub>1</sub>*] [*arg<sub>2</sub>*] ... [*arg<sub>n</sub>*]:**  
+* arg<sub>i</sub>
  * [Genius Artist URL] - takes in URL for artist on https://genius.com, in the format of https://genius.com/artists/xxxx
 	
 
