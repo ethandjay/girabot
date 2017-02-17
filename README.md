@@ -8,7 +8,7 @@ Compiles all lyrics from given artist(s) into a single text document, generates 
 * arg2
  * LOCAL   - will generate text for a tweet and print it but will not post it on the linked account
 
-**Arguments for scrape_lyrics.py [*arg1, arg2,..., argn*]:**  
+**Arguments for scrape_lyrics.py [*arg1*] [*arg2*] ... [*argn*]:**  
 * argi
  * [Genius Artist URL] - takes in URL for artist on https://genius.com, in the format of https://genius.com/artists/xxxx
 	
