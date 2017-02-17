@@ -23,7 +23,7 @@ called OAuthSettings.py, saved in the following format:
   
 **REQUIRES**
 
-* markovify
+* markovify  
 https://github.com/jsvine/markovify  
 * BeautifulSoup4  
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
