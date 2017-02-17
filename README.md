@@ -9,7 +9,8 @@ Compiles all lyrics from a given artist into a text document, generates Markov t
  * LOCAL   - will generate text for a tweet and print it but will not post it on the linked account
 
 **Arguments for scrape_lyrics.py [*arg1*]:**  
-	[Genius Artist URL] - takes in URL for artist on https://genius.com, in the format of https://genius.com/artists/xxxx
+* arg1
+ * [Genius Artist URL] - takes in URL for artist on https://genius.com, in the format of https://genius.com/artists/xxxx
 	
 
 **LOAD OAUTH SETTINGS**  
