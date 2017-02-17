@@ -35,7 +35,8 @@ https://github.com/requests/requests-oauthlib
 * Python Twitter  
 https://github.com/bear/python-twitter
 
-Some structuring borrowed from <a href="https://jeffreythompson.org">Jeff's</a> <a href='https://github.com/jeffThompson/RandomArtAssignmentBot'>bot</a>, and some GET functions from <a href="http://www.jw.pe/landing/about/">Jon's</a> <a href='http://www.jw.pe/blog/post/quantifying-sufjan-stevens-with-the-genius-api-and-nltk/'>tutorial</a>
+Some structuring borrowed from <a href="https://jeffreythompson.org">Jeff's</a> <a href='https://github.com/jeffThompson/RandomArtAssignmentBot'>bot</a>, and some GET functions from <a href="http://www.jw.pe/landing/about/">Jon's</a> <a href='http://www.jw.pe/blog/post/quantifying-sufjan-stevens-with-the-genius-api-and-nltk/'>tutorial</a>  
+Twitterbot aspect modelled off of my <a href="https://github.com/ethandjay/vicebot">vicebot</a>
 
 This project is released under a <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>Creative Commons BY-NC-SA License</a> - feel free to use, but <a href='mailto:ethandjay@gmail.com'>please let me know</a>.
 
