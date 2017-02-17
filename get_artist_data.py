@@ -6,7 +6,7 @@ CLIENT_ACCESS_TOKEN = "GR47WTYM28fcP1vuZecwLOnnI8PHRNSMpuB14F9pTmkOmm1np4My086fi
 
 BASE_URI = "https://api.genius.com"
 
-# General GET request to Genius API
+# General GET request to Genius API, thanks Jon! See README for more.
 
 def _get(path, params=None, headers=None):
 
@@ -24,7 +24,7 @@ def _get(path, params=None, headers=None):
 
     return response.json()
 
-# Gets all song objects from a given artist, account for pagination in results
+# Gets all song objects from a given artist, accounting for pagination in results, thanks Jon! See README for more.
 
 def get_artist_songs(artist_id):
 
