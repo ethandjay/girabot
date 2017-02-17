@@ -51,9 +51,9 @@ if (len(sys.argv) > 1 and sys.argv[1] == "DESTROY"):
 
 os.system('cls' if os.name=='nt' else 'clear')
 
-# Opens Markov source from path argument
+# Opens Markov source from filename argument, set to path
 
-with open("/Users/ethandjay/Documents/girabot/source/"+sys.argv[1]) as f:
+with open("/home/ethandjay/girabot/source/"+sys.argv[1]) as f:
     text = f.read()
 
 # Runs text through Markov chain, treating each line as a new sentence. To use standard punction as breakpoints, use Text() instead
