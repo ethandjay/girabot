@@ -6,6 +6,8 @@ CLIENT_ACCESS_TOKEN = "GR47WTYM28fcP1vuZecwLOnnI8PHRNSMpuB14F9pTmkOmm1np4My086fi
 
 BASE_URI = "https://api.genius.com"
 
+# General GET request to Genius API
+
 def _get(path, params=None, headers=None):
 
     url = '/'.join([BASE_URI, path])
@@ -21,6 +23,8 @@ def _get(path, params=None, headers=None):
     response.raise_for_status()
 
     return response.json()
+
+# Gets all song objects from a given artist, account for pagination in results
 
 def get_artist_songs(artist_id):
 
@@ -43,6 +47,8 @@ def get_artist_songs(artist_id):
             next_page = False
 
     return songs
+
+# Scrapes artist ID from artist page metadata
 
 def get_artist_id(artist_url):
 
