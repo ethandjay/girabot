@@ -53,7 +53,7 @@ os.system('cls' if os.name=='nt' else 'clear')
 
 # Opens Markov source from path argument
 
-with open(sys.argv[1]) as f:
+with open("source/"+sys.argv[1]) as f:
     text = f.read()
 
 # Runs text through Markov chain, treating each line as a new sentence. To use standard punction as breakpoints, use Text() instead
