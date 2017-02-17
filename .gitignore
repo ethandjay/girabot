@@ -1,6 +1,8 @@
 OAuthSettings*
 *.txt
 !Swans.txt
+!Tweets.txt
+!TweetIDs.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
