@@ -3,8 +3,8 @@ Compiles all lyrics from a given artist into a text document, generates Markov t
 
 **Arguments for girabot.py [*arg1 (optional)*] [*arg2 (optional assuming arg1=[filename])*]:**  
 * arg1
- *[filename] - the filename of the source text file  
- *DESTROY - will delete all tweets on account and will wipe TweetIDs.txt and Tweets.txt  
+ * [filename] - the filename of the source text file  
+ * DESTROY - will delete all tweets on account and will wipe TweetIDs.txt and Tweets.txt  
 * arg2
  * LOCAL   - will generate text for a tweet and print it but will not post it on the linked account
 
