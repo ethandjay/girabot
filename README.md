@@ -3,14 +3,14 @@ Compiles all lyrics from given artist(s) into a single text document, generates 
 
 **Arguments for girabot.py [*arg<sub>1</sub> (optional)*] [*arg<sub>2</sub> (optional assuming arg<sub>1</sub>=[filename])*]:**  
 * arg<sub>1</sub>
- * [filename] - the filename of the source text file  
- * DESTROY - will delete all tweets on account and will wipe TweetIDs.txt and Tweets.txt (be careful)  
+	* [filename] - the filename of the source text file  
+	* DESTROY - will delete all tweets on account and will wipe TweetIDs.txt and Tweets.txt (be careful)  
 * arg<sub>2</sub>
- * LOCAL   - will generate text for a tweet and print it but will not post it on the linked account
+	* LOCAL   - will generate text for a tweet and print it but will not post it on the linked account
 
 **Arguments for scrape_lyrics.py [*arg<sub>1</sub>*] [*arg<sub>2</sub>*] ... [*arg<sub>n</sub>*]:**  
 * arg<sub>i</sub>
- * [Genius Artist URL] - takes in URL for artist on https://genius.com, in the format of https://genius.com/artists/xxxx
+	* [Genius Artist URL] - takes in URL for artist on https://genius.com, in the format of https://genius.com/artists/xxxx
 	
 
 **LOAD OAUTH SETTINGS**  
