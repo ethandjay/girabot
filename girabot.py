@@ -53,7 +53,11 @@ os.system('cls' if os.name=='nt' else 'clear')
 
 # Opens Markov source from filename argument, set to path
 
-with open("/home/ethandjay/girabot/source/"+sys.argv[1]) as f:
+script_dir = os.path.dirname(__file__) #<-- absolute dir the script is in
+rel_path = "source/"
+abs_file_path = os.path.join(script_dir, rel_path)
+
+with open(abs_file_path+sys.argv[1]) as f:
     text = f.read()
 
 # Runs text through Markov chain, treating each line as a new sentence. To use standard punction as breakpoints, use Text() instead
@@ -62,11 +66,9 @@ text_model = markovify.NewlineText(text)
 
 # Makes sure it works
 
-done = False
-while done == False:
+tweet = None;
+while tweet == None:
 	tweet = text_model.make_short_sentence(140)
-	if (tweet != None):
-		done = True
 
 
 try:
